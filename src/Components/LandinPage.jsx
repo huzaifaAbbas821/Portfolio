@@ -1,9 +1,11 @@
 import React from "react"
 import background from '../assets/download.jpg'
+import {Element , Link} from 'react-scroll'
 
 function LandingPage() {
     return (
-        <div className="h-[90vh] w-full bg-zinc-900 pt-1 text-white"
+        <Element name="home" >
+        <div id="home" className="h-[90vh] w-full bg-zinc-900 pt-1 text-white"
         style={{backgroundImage:"url({background})"}}
         >
             <div className="mt-[3vh] flex h-[70vh] flex-col items-center justify-center px-[2vh]">
@@ -26,15 +28,18 @@ function LandingPage() {
                 {/* <span className=" font-normal px-[2vh]  text-wrap text-justify text-[3vh] md:block md:text-[1.8vw]">
                     
                 </span> */}
+                <Link to="projects" smooth={true} duration={500} >
                 <button className="mt-[6vh]  rounded-lg bg-[#1b5f8c] px-[1.4em] py-[0.4em] text-[3.2vh] font-semibold transition-transform hover:scale-x-110 hover:scale-y-110 hover:bg-[#1c2e66] lg:text-[2vw] md:transform md:py-[0.4em] md:text-2xl">
                     PROJECTS
                 </button>
+                </Link>
                 
             </div>
             <div className="w-full px-20">
                 {/* <hr className='w-full h-[2px] bg-zinc-500' /> */}
             </div>
         </div>
+        </Element>
     )
 }
 

@@ -1,9 +1,11 @@
 import React from "react"
 import logo from "../assets/coder.svg"
+import {Element} from 'react-scroll'
 
 function About2() {
     return (
-        <div className="min-h-[110vh] w-full md:my-4 px-[1rem] md:min-h-[100vh] lg:min-h-fit lg:mb-[13vw]">
+        <Element name="about" >
+        <div id="about" className="min-h-[110vh] w-full md:my-4 px-[1rem] md:min-h-[100vh] lg:min-h-fit lg:mb-[13vw]">
             <hr className="mb-[2vw] h-[2px] w-full bg-zinc-500" />
 
             <div className="mb-[4vw] mt-[4vw] flex h-[70vh] w-full flex-row">
@@ -56,6 +58,7 @@ function About2() {
             </div>
             {/* <hr className='w-full mt-[2rem] h-[4px] bg-gray-400' /> */}
         </div>
+        </Element>
     )
 }
 

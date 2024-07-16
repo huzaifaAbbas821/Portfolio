@@ -1,24 +1,47 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import bg from '../assets/webScraperImg.png'
+import bg1 from '../assets/Todo.png'
+import bg2 from '../assets/bg2.png'
+
+// import { Link } from "react-router-dom"
+import { Element } from 'react-scroll';
 
 function Projects() {
     let users = [
         {
+            title: "Blog Site",
+            img: bg2,
+            paragraph:
+                "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus animi, ullam, voluptatum maiores itaque distinctio vero, qui quasi numquam minus similique. Labore, sequi nihil! Mollitia voluptate minus voluptatum quasi veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+            WLink: "https://appwrite-blog-site-coral.vercel.app/",
+            GLink: "https://github.com/huzaifaAbbas821/appwriteBlogSite",
+        },
+        {
             title: "Web scrapper",
+            img: bg,
             paragraph:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus animi, ullam, voluptatum maiores itaque distinctio vero, qui quasi numquam minus similique. Labore, sequi nihil! Mollitia voluptate minus voluptatum quasi veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
             WLink: "https://huzaifaabbas821.github.io/Web-scraper/display/",
             GLink: "https://github.com/huzaifaAbbas821/Web-scraper",
         },
+        {
+            title: "Todo App",
+            img: bg1,
+            paragraph:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam et voluptatum reprehenderit ab, impedit error doloribus ullam laudantium consequuntur, itaque tempore rem iusto quaerat optio voluptate unde corporis quibusdam sint?" ,
+            WLink:"https://todo-ten-chi-20.vercel.app/",
+            GLink: "https://github.com/huzaifaAbbas821/todo",
+        }
     ]
 
     return (
+ 
         <div className="mt-[5vh] w-full bg-zinc-900 px-2 py-20 text-white md:px-[2vw] lg:px-[2vw]">
             <hr className="h-[2px] w-full bg-zinc-500 md:mt-[4vw]" />
-            <div className="mt-[4vw] flex w-full flex-col items-center justify-center">
+            <Element name="projects" >
+            <div id="projects"  className="mt-[4vw] flex w-full flex-col items-center justify-center">
                 <div className="flex w-[100%] flex-col items-center justify-center text-wrap">
                     <h1 className="text-[1.6em] font-semibold uppercase tracking-tight text-[#1693b5] md:leading-[4.2vw] lg:text-[4vw]">
-                        Projects
+                        Projects 
                     </h1>
                     <p className="isolate  my-4 mt-4 block w-[93%] text-wrap px-2 text-justify text-[3vh] font-normal text-white md:text-center lg:mt-[2vw] lg:text-[1.6vw]">
                         Here you will find some of my personal projects that I
@@ -35,7 +58,9 @@ function Projects() {
                     className="w-full bg-zinc-900 p-2 text-white lg:mt-[8vw]"
                 >
                     <div className="mt-3 flex w-full flex-col gap-8 md:mt-4 md:items-center md:justify-center lg:flex-row">
-                        <div className="h-[40vh] w-full rounded-md bg-[#a1b562] md:h-[50vh] md:w-[60vw] lg:mx-[6vw] lg:h-[50vh] lg:w-1/2"></div>
+                        <div className="h-[40vh] w-full rounded-lg bg-zinc-900 bg-cover md:h-[50vh] md:w-[60vw] lg:mx-[6vw] lg:h-[50vh] lg:w-1/2">
+                            <img src={user.img} className="h-full w-full rounded-lg" alt="" />
+                        </div>
                         <div className="flex w-full flex-col lg:mt-[2vw] lg:w-1/2">
                             <h1 className="text-left px-2 text-[6vh] font-semibold text-[#45b5d4] md:text-center md:text-3xl lg:w-[100%] lg:text-justify lg:text-[3vw]">
                                 {user.title}
@@ -69,6 +94,7 @@ function Projects() {
                     </div>
                 </div>
             ))}
+        </Element>
         </div>
     )
 }
