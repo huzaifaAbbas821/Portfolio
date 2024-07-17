@@ -21,7 +21,7 @@ function Projects() {
             img: bg,
             paragraph:
                 "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus animi, ullam, voluptatum maiores itaque distinctio vero, qui quasi numquam minus similique. Labore, sequi nihil! Mollitia voluptate minus voluptatum quasi veniam. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-            WLink: "https://huzaifaabbas821.github.io/Web-scraper/display/",
+            WLink: "https://huzaifaabbas821.github.io/WebScraper/display/",
             GLink: "https://github.com/huzaifaAbbas821/Web-scraper",
         },
         {
